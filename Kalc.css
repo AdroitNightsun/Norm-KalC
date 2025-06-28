@@ -352,16 +352,38 @@ template {
 
 
 body {
-  background-image: url("https://512pixels.net/wp-content/uploads/2025/06/12-Dark-thumbnail.jpg");
+
+  /* background-image: url("https://512pixels.net/wp-content/uploads/2025/06/12-Dark-thumbnail.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center; */
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
+  background-image: linear-gradient(
+          135deg,
+          #ffb224,
+          #e34ba9,
+          #0072f5,
+          #95f3d9
+        );
+        animation: animation-aagePeeche 10s ease infinite;
+        background-size: 300% 300%;
 }
+
+@keyframes animation-aagePeeche {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
 
 .container {
   background-color: #0000004f;
@@ -392,6 +414,11 @@ body {
   border: none;
   outline: none;
 }
+
+.input::placeholder{
+  color: rgba(255, 255, 255, 0.527);
+}
+
 /* For Chrome, Safari, Edge, Opera */
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
@@ -432,6 +459,8 @@ button:active{
   cursor: pointer;
 
 }
+
+
 
 .sev, .ei, .ni, .fo, .fi, .si, .one, .too, .thr, .ze, .dec, .eq{
   background-color: rgba(255, 255, 255, 0.37);
